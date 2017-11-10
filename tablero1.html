@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tablero</title>
+  </head>
+
+  <body>
+    <h1>Crea un tablero de ajedrez</h1>
+    <br>
+    <p id = "crea"> Mensaje </p>
+
+    <script type="text/javascript">
+        var dim = 0;
+
+        //ventana emergente
+        dimension = prompt('Digita las dimensiones del tablero: ');
+        //Get the element with the specified ID:
+        cadena = document.getElementById("crea");
+        //Change the HTML content of a <p> element with id="demo":
+        cadena.innerHTML = " Las dimensiones del tablero son: " + dimension + " x " + dimension;
+
+        dim = dimension;
+
+        document.write("<table border='1' width='200' height='200'>");
+
+        for(var i=1; i<=dim; i++){
+          document.write("<tr>");
+
+          for(var j=1; j<=dim; j++){
+            if((i+j)%2!=0){
+              document.write("<td bgcolor='white'></td>");
+            }
+
+            else{
+              document.write("<td bgcolor='black'></td>");
+            }
+          }
+        document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+
+
+
+  </body>
+</html>
